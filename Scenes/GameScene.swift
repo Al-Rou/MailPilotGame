@@ -26,6 +26,7 @@ class GameScene: SKScene
         
         // add ocean to the scene
         ocean = Ocean() // allocate memory
+        //For landscape orientation, y has to be zero!
         ocean?.position = CGPoint(x: 773, y: 0)
 //        ocean?.position = CGPoint(x: 0, y: 773)
         addChild(ocean!) // add the ocean to the scene
@@ -37,10 +38,11 @@ class GameScene: SKScene
         // add plane to the scene
         plane = Plane()
 //        plane?.position = CGPoint(x: 0, y: -495)
+        //For landscape orientation, y has to be zero!
         plane?.position = CGPoint(x: -495, y: 0)
         addChild(plane!)
         
-        // add 3 clouds to the scene
+        // add 2 clouds to the scene
         for index in 0...1
         {
             let cloud: Cloud = Cloud()
@@ -75,12 +77,14 @@ class GameScene: SKScene
     func touchDown(atPoint pos : CGPoint)
     {
 //        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        //For landscape orientation, x has to be fixed!
         plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
 //        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        //For landscape orientation, x has to be fixed!
         plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
 
     }
@@ -88,6 +92,7 @@ class GameScene: SKScene
     func touchUp(atPoint pos : CGPoint)
     {
 //        plane?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        //For landscape orientation, x has to be fixed!
         plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
         
     }
