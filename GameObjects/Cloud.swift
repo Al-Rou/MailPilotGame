@@ -22,6 +22,7 @@ class Cloud : GameObject
 //        {
 //            Reset()
 //        }
+        //For landscape orientation, x position has to be reset!
         if(position.x <= -756)
         {
             Reset()

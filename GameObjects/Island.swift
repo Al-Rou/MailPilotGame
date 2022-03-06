@@ -22,6 +22,7 @@ class Island : GameObject
 //        {
 //            Reset()
 //        }
+        //For landscape orientation, x position has to be checked!
         if(position.x <= -730)
         {
             Reset()
@@ -31,10 +32,12 @@ class Island : GameObject
     override func Reset()
     {
 //        position.y = 730
+        //For landscape orientation, x position has to be reset!
         position.x = 730
         // get a pseudo random number -313 to 313
         let randomX:Int = (randomSource?.nextInt(upperBound: 616))! - 313
 //        position.x = CGFloat(randomX)
+        //For landscape orientation, y position has to be changed randomly!
         position.y = CGFloat(randomX)
         isCollding = false
     }
@@ -44,6 +47,7 @@ class Island : GameObject
     {
         Reset()
         zPosition = 1
+        //I didn't rename the variable for landscape orientation.
         verticalSpeed = 5.0
     }
     
@@ -56,6 +60,7 @@ class Island : GameObject
     func Move()
     {
 //        position.y -= verticalSpeed!
+        //I didn't rename the variable for landscape orientation.
         position.x -= verticalSpeed!
     }
 }

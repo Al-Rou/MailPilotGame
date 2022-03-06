@@ -6,6 +6,7 @@ class Plane : GameObject
     // initializer
     init()
     {
+        //For landscape orientation, plane is rotated 90 degrees and saved as plane-1!
         super.init(imageString: "plane-1", initialScale: 2.0)
         Start()
     }
@@ -19,6 +20,7 @@ class Plane : GameObject
     override func CheckBounds()
     {
         // constrain on the left boundary
+        //For landscape orientation, y position has to be checked!
         if(position.y <= -310)
         {
             position.y = -310
@@ -29,6 +31,7 @@ class Plane : GameObject
 //        }
         
         // constrain on the right boundary
+        //For landscape orientation, y position has to be checked!
         if(position.y >= 310)
         {
             position.y = 310

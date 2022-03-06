@@ -7,6 +7,7 @@ class Ocean : GameObject
     // constructor / initializer
     init()
     {
+        //For landscape orientation, ocean is rotated 90 degrees and saved as ocean-1!
         super.init(imageString: "ocean-1", initialScale: 2.0)
         Start()
     }
@@ -22,6 +23,7 @@ class Ocean : GameObject
 //        {
 //            Reset()
 //        }
+        //For landscape orientation, x position has to be checked!
         if(position.x <= -773)
         {
             Reset()
@@ -31,6 +33,7 @@ class Ocean : GameObject
     override func Reset()
     {
         //position.y = 773
+        //For landscape orientation, x position has to be reset!
         position.x = 773
     }
     
@@ -38,6 +41,7 @@ class Ocean : GameObject
     override func Start()
     {
         zPosition = 0
+        //I didn't rename the variable for landscape orientation.
         verticalSpeed = 5.0
     }
     
@@ -50,6 +54,7 @@ class Ocean : GameObject
     func Move()
     {
         //position.y -= verticalSpeed!
+        //For landscape orientation, x position has to be changed!
         position.x -= verticalSpeed!
     }
 }
