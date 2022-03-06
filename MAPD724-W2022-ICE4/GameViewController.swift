@@ -1,8 +1,8 @@
 //
 //  GameViewController.swift
-//  MAPD724-W2022-ICE1
+//  MAPD724-W2022
 //
-//  Created by Tom Tsiliopoulos on 2022-01-12.
+//  Created by Ali Roudak on 2022-03-05.
 //
 
 import UIKit
